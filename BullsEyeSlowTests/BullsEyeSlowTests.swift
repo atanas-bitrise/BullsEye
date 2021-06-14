@@ -79,7 +79,7 @@ class BullsEyeSlowTests: XCTestCase {
   
   func testApiCallCompletes() throws {
     // given
-    let urlString = "http://www.randomnumberapi.com/test"
+    let urlString = "http://www.randomnumberapi.com"
     let url = URL(string: urlString)!
     let promise = expectation(description: "Completion handler invoked")
     var statusCode: Int?

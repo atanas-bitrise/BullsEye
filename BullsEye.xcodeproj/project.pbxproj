@@ -57,6 +57,8 @@
 		13FB7D0626773B370084066F /* BullsEyeMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeMockTests.swift; sourceTree = "<group>"; };
 		13FB7D0C26773C570084066F /* BullsEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13FB7D0E26773C570084066F /* BullsEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeUITests.swift; sourceTree = "<group>"; };
+		13FB7D162677410F0084066F /* FullTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FullTests.xctestplan; sourceTree = "<group>"; };
+		13FB7D17267742220084066F /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
 		202D822D25D7D57B00778080 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		202D823D25D7D8A300778080 /* URLSessionStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
 		5394F02421864DF4006E754C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,8 @@
 		D2A5F1F71F4A9143005CD714 = {
 			isa = PBXGroup;
 			children = (
+				13FB7D17267742220084066F /* UnitTests.xctestplan */,
+				13FB7D162677410F0084066F /* FullTests.xctestplan */,
 				D2A5F2021F4A9144005CD714 /* BullsEye */,
 				13FB7CEF267726620084066F /* BullsEyeTests */,
 				13FB7CFC2677288A0084066F /* BullsEyeSlowTests */,
