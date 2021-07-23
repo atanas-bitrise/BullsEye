@@ -27,6 +27,7 @@
 /// THE SOFTWARE.
 
 import XCTest
+import Mussel
 
 class BullsEyeUITests: XCTestCase {
   var app: XCUIApplication!

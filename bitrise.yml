@@ -1,0 +1,12 @@
+format_version: "11"
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  check:
+    steps:
+    - xcode-test:
+        inputs:
+        - project_path: BullsEye.xcworkspace
+        - scheme: BullsEye
+        - xcodebuild_options: -testPlan UITests
+        - output_tool: xcodebuild

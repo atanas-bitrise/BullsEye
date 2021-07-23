@@ -1,0 +1,16 @@
+PODS:
+  - Mussel (0.1.8)
+
+DEPENDENCIES:
+  - Mussel
+
+SPEC REPOS:
+  trunk:
+    - Mussel
+
+SPEC CHECKSUMS:
+  Mussel: 49b6973eaf5b04a553447c6d99c444475ef80a86
+
+PODFILE CHECKSUM: 9fbfef343c948ff615e496bf115e15514aaa521c
+
+COCOAPODS: 1.10.1
