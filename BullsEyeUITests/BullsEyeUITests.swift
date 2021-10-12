@@ -39,6 +39,14 @@ class BullsEyeUITests: XCTestCase {
     app.launch()
   }
   
+  func testDeepLink() {
+    let universalLinkTester = MusselUniversalLinkTester(targetAppBundleId: "com.raywenderlich.BullsEye")
+    universalLinkTester.open("bullseye://example/content?id=2")
+    
+    let typeLabel = app.staticTexts["Guess where the slider is: "]
+    XCTAssertTrue(typeLabel.exists)
+  }
+  
   func testGameStyleSwitch() {
     // given
     let slideButton = app.segmentedControls.buttons["Slide"]
