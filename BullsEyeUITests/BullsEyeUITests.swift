@@ -44,7 +44,8 @@ class BullsEyeUITests: XCTestCase {
     universalLinkTester.open("bullseye://example/content?id=2")
     
     let slideLabel = app.staticTexts["Get as close as you can to: "]
-    XCTAssert(slideLabel.waitForExistence(timeout: 5))
+    // XCTAssert(slideLabel.waitForExistence(timeout: 5))
+    XCTAssertTrue(slideLabel.exists)
   }
   
   func testGameStyleSwitch() {
