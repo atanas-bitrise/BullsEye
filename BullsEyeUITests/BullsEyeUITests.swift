@@ -43,8 +43,8 @@ class BullsEyeUITests: XCTestCase {
     let universalLinkTester = MusselUniversalLinkTester(targetAppBundleId: "com.raywenderlich.BullsEye")
     universalLinkTester.open("bullseye://example/content?id=2")
     
-    let typeLabel = app.staticTexts["Guess where the slider is: "]
-    XCTAssert(typeLabel.waitForExistence(timeout: 5))
+    let slideLabel = app.staticTexts["Get as close as you can to: "]
+    XCTAssert(slideLabel.waitForExistence(timeout: 5))
   }
   
   func testGameStyleSwitch() {
