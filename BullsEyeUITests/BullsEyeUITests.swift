@@ -44,7 +44,7 @@ class BullsEyeUITests: XCTestCase {
     universalLinkTester.open("bullseye://example/content?id=2")
     
     let typeLabel = app.staticTexts["Guess where the slider is: "]
-    XCTAssertTrue(typeLabel.exists)
+    XCTAssert(typeLabel.waitForExistence(timeout: 5))
   }
   
   func testGameStyleSwitch() {
