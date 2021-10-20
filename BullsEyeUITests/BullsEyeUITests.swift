@@ -43,6 +43,11 @@ class BullsEyeUITests: XCTestCase {
     let universalLinkTester = MusselUniversalLinkTester(targetAppBundleId: "com.raywenderlich.BullsEye")
     universalLinkTester.open("bullseye://example/content?id=2")
     
+    let mainScreenScreenshot = XCUIScreen.main.screenshot()
+    let attachment = XCTAttachment(screenshot: mainScreenScreenshot)
+            attachment.lifetime = .keepAlways
+            add(attachment)
+    
     let slideLabel = app.staticTexts["Get as close as you can to: "]
     // XCTAssert(slideLabel.waitForExistence(timeout: 5))
     XCTAssertTrue(slideLabel.exists)
