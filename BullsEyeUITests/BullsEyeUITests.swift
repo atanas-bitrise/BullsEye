@@ -53,6 +53,43 @@ class BullsEyeUITests: XCTestCase {
     XCTAssertTrue(slideLabel.exists)
   }
   
+  func testDeepLinkWithSafari() {
+    let app = XCUIApplication()
+    app.launch()
+    
+    // Launch Safari and deeplink back to our app
+    openFromSafari("bullseye://example/content?id=2")
+    // Make sure Safari properly switched back to our app before asserting
+    XCTAssert(app.wait(for: .runningForeground, timeout: 5))
+    
+    let slideLabel = app.staticTexts["Get as close as you can to: "]
+    XCTAssert(slideLabel.waitForExistence(timeout: 5))
+  }
+  
+  private func openFromSafari(_ urlString: String) {
+      let safari = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")
+      safari.launch()
+      // Make sure Safari is really running before asserting
+      XCTAssert(safari.wait(for: .runningForeground, timeout: 5))
+      // Type the deeplink and execute it
+      let firstLaunchContinueButton = safari.buttons["Continue"]
+      if firstLaunchContinueButton.exists {
+          firstLaunchContinueButton.tap()
+      }
+      safari.buttons["Go"].tap()
+      let keyboardTutorialButton = safari.buttons["Continue"]
+      if keyboardTutorialButton.exists {
+          keyboardTutorialButton.tap()
+      }
+      safari.typeText(urlString)
+      safari.buttons["Go"].tap()
+        
+//      _ = confirmationButton.waitForExistence(timeout: 2)
+//      if confirmationButton.exists {
+//          confirmationButton.tap()
+//      }
+  }
+  
   func testGameStyleSwitch() {
     // given
     let slideButton = app.segmentedControls.buttons["Slide"]
