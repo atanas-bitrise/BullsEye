@@ -76,18 +76,24 @@ class BullsEyeUITests: XCTestCase {
       if firstLaunchContinueButton.exists {
           firstLaunchContinueButton.tap()
       }
-      safari.buttons["Go"].tap()
+    
+      let searchField = safari.textFields["Address"]
+      searchField.tap()
+    
       let keyboardTutorialButton = safari.buttons["Continue"]
+      _ = keyboardTutorialButton.waitForExistence(timeout: 2)
       if keyboardTutorialButton.exists {
           keyboardTutorialButton.tap()
       }
-      safari.typeText(urlString)
+    
+      searchField.typeText(urlString)
       safari.buttons["Go"].tap()
-        
-//      _ = confirmationButton.waitForExistence(timeout: 2)
-//      if confirmationButton.exists {
-//          confirmationButton.tap()
-//      }
+    
+      let confirmationButton = safari.buttons["Open"]
+      _ = confirmationButton.waitForExistence(timeout: 2)
+      if confirmationButton.exists {
+        confirmationButton.tap()
+      }
   }
   
   func testGameStyleSwitch() {
