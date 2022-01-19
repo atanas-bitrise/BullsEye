@@ -48,6 +48,11 @@ class BullsEyeUITests: XCTestCase {
             attachment.lifetime = .keepAlways
             add(attachment)
     
+    // Test adding a video attachment
+    let fakeVideoAttachment = XCTAttachment(data: Data("some data".utf8), uniformTypeIdentifier: "public.video")
+    fakeVideoAttachment.lifetime = .keepAlways
+    add(fakeVideoAttachment)
+    
     let slideLabel = app.staticTexts["Get as close as you can to: "]
     // XCTAssert(slideLabel.waitForExistence(timeout: 5))
     XCTAssertTrue(slideLabel.exists)
